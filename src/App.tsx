@@ -1,8 +1,19 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { Landing } from "./pages";
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Landing />,
+    },
+  ]);
+
   return (
-    <main className="App">
-      <h1>Home Bazh</h1>
-    </main>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
